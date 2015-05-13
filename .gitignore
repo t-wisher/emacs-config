@@ -3,3 +3,18 @@
 
 # Packaging
 .cask
+
+.agignore
+.session
+.smex-items
+.travis.yml
+ac-comphist.dat
+auto-save-list/
+elpa/
+history
+ido.last
+*~
+org-clock-save.el
+projectile-bookmarks.eld
+recentf
+smex-items
