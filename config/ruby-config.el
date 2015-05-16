@@ -1,8 +1,12 @@
+;;; package --- Summary
+;;; Commentary:
+;;; Code:
 (require 'rbenv)
 (global-rbenv-mode)
 
 (require 'robe)
 (add-hook 'ruby-mode-hook 'robe-mode)
+(add-hook 'robe-mode-hook 'ac-robe-setup)
 
 (require 'bundler)
 
@@ -13,3 +17,5 @@
 (require 'ruby-guard)
 
 (provide 'ruby-config)
+
+;;; ruby-config.el ends here
