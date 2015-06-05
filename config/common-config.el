@@ -37,9 +37,16 @@
 (ac-config-default)
 
 ;; smartparens
-(require 'smartparens-config)
-(smartparens-global-mode)
-(show-smartparens-global-mode t)
+;;(require 'smartparens-config)
+;;(smartparens-global-mode)
+;;(show-smartparens-global-mode t)
+
+;; try autopair
+(require 'autopair)
+(autopair-global-mode)
+
+;; try electric-mode instead of smartparens
+;(electric-pair-mode 1)
 
 ;; magit for git repos
 (require 'magit)

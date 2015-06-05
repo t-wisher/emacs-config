@@ -16,6 +16,11 @@
 
 (require 'ruby-guard)
 
+(require 'ruby-tools)
+
+(require 'rubocop)
+(add-hook 'ruby-mode-hook 'rubocop-mode)
+
 (provide 'ruby-config)
 
 ;;; ruby-config.el ends here

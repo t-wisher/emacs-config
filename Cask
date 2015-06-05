@@ -4,6 +4,7 @@
 (source melpa-stable)
 
 (depends-on "auto-complete")
+(depends-on "autopair")
 (depends-on "bundler")
 (depends-on "color-theme-sanityinc-tomorrow")
 (depends-on "evil")
@@ -20,6 +21,7 @@
 (depends-on "rbenv")
 (depends-on "robe")
 (depends-on "rspec-mode")
+(depends-on "rubocop")
 (depends-on "ruby-guard")
 (depends-on "ruby-tools")
 (depends-on "slime")
