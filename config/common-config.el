@@ -31,6 +31,10 @@
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
+;; evil-mode
+(require 'evil)
+(evil-mode 1)
+
 ;; auto-complete
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/dict")
@@ -56,6 +60,13 @@
 (add-hook 'after-init-hook #'global-flycheck-mode)
 (exec-path-from-shell-copy-env "GOROOT")
 (exec-path-from-shell-copy-env "GOPATH")
+
+;; yaml-mode
+(require 'yaml-mode)
+(add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
+(add-hook 'yaml-mode-hook
+      '(lambda ()
+        (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
 
 (provide 'common-config)
 ;;; common-config.el ends here
