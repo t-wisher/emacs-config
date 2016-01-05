@@ -7,6 +7,7 @@
 (depends-on "autopair")
 (depends-on "bundler")
 (depends-on "color-theme-sanityinc-tomorrow")
+(depends-on "dockerfile-mode")
 (depends-on "evil")
 (depends-on "evil-visual-mark-mode")
 (depends-on "exec-path-from-shell")

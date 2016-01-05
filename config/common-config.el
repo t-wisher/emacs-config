@@ -31,19 +31,10 @@
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
-;; evil-mode
-(require 'evil)
-(evil-mode 1)
-
 ;; auto-complete
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/dict")
 (ac-config-default)
-
-;; smartparens
-;;(require 'smartparens-config)
-;;(smartparens-global-mode)
-;;(show-smartparens-global-mode t)
 
 ;; try autopair
 (require 'autopair)
@@ -66,7 +57,11 @@
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
 (add-hook 'yaml-mode-hook
       '(lambda ()
-        (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
+		 (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
+
+;; dockerfile-mode
+(require 'dockerfile-mode)
+(add-to-list 'auto-mode-alist '("Dockerfile\\'" . dockerfile-mode))
 
 (provide 'common-config)
 ;;; common-config.el ends here
